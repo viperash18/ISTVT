@@ -1,0 +1,13 @@
+# Core
+torch>=2.0
+torchvision>=0.15
+einops>=0.6
+timm>=0.9.2
+# Face detection for preprocessing
+facenet-pytorch>=2.5.3
+# Video / image IO
+opencv-python-headless>=4.7
+# Metrics & utils
+scikit-learn>=1.2
+numpy>=1.23
+tqdm>=4.64

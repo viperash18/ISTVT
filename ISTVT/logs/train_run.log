@@ -1,0 +1,23 @@
+======================================================================
+ISTVT configuration
+======================================================================
+PROJECT_ROOT        : /teamspace/studios/this_studio/istvt_lightning
+TRAIN_DATASETS      : ['celebdf', 'dfdc']
+CROSS_TEST_DATASET  : ff
+  raw[celebdf ]     : /teamspace/studios/this_studio/datasets/celeb-df   [OK]
+  raw[dfdc    ]     : /teamspace/studios/this_studio/datasets/dfdc   [OK]
+  raw[ff      ]     : /teamspace/studios/this_studio/datasets/FaceForensics++_C23   [OK]
+SEQ_LEN / DEPTH/HEADS: 6 / 12 / 8
+BATCH/ACCUM/EPOCHS  : 8 / 2 / 20
+RUN_NAME            : istvt_celebdf_dfdc__x_ff
+======================================================================
+train clips=6649  val clips=739
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/timm/models/_factory.py:138: UserWarning: Mapping deprecated model name xception to current legacy_xception.
+  model = create_fn(
+[backbone] Xception entry flow loaded from: timm:xception(pretrained)
+/teamspace/studios/this_studio/istvt_lightning/src/train.py:77: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=cfg.USE_AMP and device.type == "cuda")
+RESUMED from /teamspace/studios/this_studio/istvt_lightning/checkpoints/istvt_celebdf_dfdc__x_ff/last.pt: next epoch 5, best_auc=0.9787
+  epoch 5 step 50/3324 lr=9.32e-05 loss=0.1289
+  epoch 5 step 100/3324 lr=9.32e-05 loss=0.1351
+  epoch 5 step 150/3324 lr=9.31e-05 loss=0.1155
